@@ -1,70 +1,113 @@
-# Getting Started with Create React App
+# Sporty Leagues - Sports League Browser
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive React application that displays sports leagues from around the world using TheSportsDB API.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- Browse sports leagues from around the world
+- Real-time search with debounced input
+- Filter leagues by sport type
+- View historical seasonal badges for each league
+- Fully responsive design
+- Smart caching with React Query
 
-### `npm start`
+## 🛠 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React 18** with TypeScript
+- **Ant Design** for UI components
+- **React Query** for data fetching and caching
+- **React Router** for navigation
+- **Axios** for HTTP requests
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Project Structure
 
-### `npm test`
+```
+src/
+├── api/           # API functions and configuration
+├── components/    # Reusable UI components
+├── hooks/         # Custom React hooks
+├── layouts/       # Layout components
+├── pages/         # Page components
+├── types/         # TypeScript type definitions
+└── utils/         # Utility functions
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Each folder includes an `index.ts` file for clean barrel exports:
 
-### `npm run build`
+```typescript
+// Clean imports using barrel exports
+import { SearchBar, SportFilter, LeagueCard } from '../components';
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
+- Node.js 16+
+- npm 7+
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+```bash
+# Clone and navigate to project
+git clone <repository-url>
+cd sporty-task/sporty
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Install dependencies
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Start development server
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Available Scripts
 
-## Learn More
+- `npm start` - Development server
+- `npm run build` - Production build
+- `npm run eject` - Eject from Create React App
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔧 API Configuration
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Uses TheSportsDB free API:
+- **All Leagues**: `/all_leagues.php`
+- **League Seasons**: `/search_all_seasons.php?badge=1&id={id}`
 
-### Code Splitting
+Configuration in `src/api/config.ts`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚀 Deployment
 
-### Analyzing the Bundle Size
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Deploy the `build` folder to:
+- Netlify, Vercel, or GitHub Pages
+- Any static hosting service
+- CDN or web server
 
-### Making a Progressive Web App
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Open a Pull Request
 
-### Advanced Configuration
+## 🤖 Development Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project was developed with AI assistance (Claude) for certain mechanical and boilerplate tasks including:
+- TypeScript type definitions and API integration boilerplate
+- Basic styling patterns
+- Documentation structure
 
-### Deployment
+The core application logic, architecture decisions, and user experience design were human-driven.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🙏 Acknowledgments
 
-### `npm run build` fails to minify
+- [TheSportsDB](https://www.thesportsdb.com/) for providing the free sports API
+- [Ant Design](https://ant.design/) for the excellent UI component library
+- [React Query](https://tanstack.com/query) for powerful data fetching capabilities
+- [Create React App](https://create-react-app.dev/) for the development setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Built with ❤️ using React, TypeScript, and Ant Design**
