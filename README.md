@@ -48,9 +48,9 @@ import { SearchBar, SportFilter, LeagueCard } from '../components';
 ### Installation
 
 ```bash
-# Clone and navigate to project
-git clone <repository-url>
-cd sporty-task/sporty
+# Clone the repository
+git clone https://github.com/armanghazaryan066-arch/sporty-leagues.git
+cd sporty-leagues
 
 # Install dependencies
 npm install
